@@ -9,6 +9,7 @@ var block_image_object="";
 function player_update()
 {
     fabric.Image.fromURL("player.png",function(Img){
+        player_object=Img;
         player_object.scaleToWidth(150);
         player_object.scaleToHeight(140);
         player_object.set({
@@ -48,7 +49,7 @@ function my_keydown(e)
         document.getElementById("current_height").innerHTML = block_image_height;
 
     }
-    if(e.shiftkey && keyPressed == '77');
+    if(e.shiftkey==true  && keyPressed == '77');
     {
         console.log("m and sift pressed together");
         block_image_width = block_image_width-10;
